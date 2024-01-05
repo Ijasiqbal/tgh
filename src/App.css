@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.base{
+  background: linear-gradient(to right, #35258b , #5429ab);
+  min-height: 100vh;
+}
+.tab {
+  display: flex;
+  justify-content:space-between;
+  padding: 10px 5%;
+  padding-right: 7%;
+}
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  color: white;
+}
+.tab .selected{
+  size: 1.5em;
+  font-weight: bold;
+}
