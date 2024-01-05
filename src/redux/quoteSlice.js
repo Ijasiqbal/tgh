@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    bookmarks: []
+    bookmarks: [],
+    loading: false, // add this line
 };
 
 export const quoteSlice = createSlice({
@@ -9,13 +10,14 @@ export const quoteSlice = createSlice({
   initialState,
   reducers: {
     addBookmark: (state, action) => {
-      // Add the new bookmark to the state
       state.bookmarks.push(action.payload);
+    },
+    setLoading: (state, action) => { // add this reducer
+      state.loading = action.payload;
     },
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { addBookmark } = quoteSlice.actions
+export const { addBookmark, setLoading } = quoteSlice.actions // export the new action
 
 export default quoteSlice.reducer
