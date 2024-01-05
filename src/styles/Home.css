@@ -1,4 +1,5 @@
 .home{
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,13 +7,37 @@
 }
 .quoteContainer{
     color: white;
-    width: 80%;
+    width: 60%;
     background-color: #d05353;
     border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .text{
-    margin: 30px 8%;
+    margin: 30px 10%;
 }
-.text{
-    
+.bottomDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40%;
 }
+ .select select{
+    width: 150px;
+    padding: 5px;
+    margin : 45px 0;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+ }
+ .greenBtn button{
+    background-color: #4caf50;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+ }

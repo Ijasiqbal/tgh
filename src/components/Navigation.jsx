@@ -12,13 +12,13 @@ const Navigation = () => {
     return ( 
         <div className="navigatePage">
             <div className="tab">
-                <button onClick={
+                <button className={homePage && 'selected'} onClick={
                     () => {
                         setHomePage(true)
                         setBookmarksPage(false)
                     }
                 }>Home</button>
-                <button onClick={
+                <button className={bookmarksPage && 'selected'} onClick={
                     () => {
                         setHomePage(false)
                         setBookmarksPage(true)
