@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.navigatePage{
+  
 }
 .base{
   background: linear-gradient(to right, #35258b , #5429ab);
