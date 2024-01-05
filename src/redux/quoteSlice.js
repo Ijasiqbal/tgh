@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     bookmarks: [],
-    loading: false, // add this line
+    loading: false,
 };
 
 export const quoteSlice = createSlice({
@@ -12,12 +12,15 @@ export const quoteSlice = createSlice({
     addBookmark: (state, action) => {
       state.bookmarks.push(action.payload);
     },
-    setLoading: (state, action) => { // add this reducer
+    removeBookmark: (state, action) => { // add this reducer
+      state.bookmarks.splice(action.payload, 1);
+    },
+    setLoading: (state, action) => {
       state.loading = action.payload;
     },
   },
 })
 
-export const { addBookmark, setLoading } = quoteSlice.actions // export the new action
+export const { addBookmark, removeBookmark, setLoading } = quoteSlice.actions // export the new action
 
 export default quoteSlice.reducer
