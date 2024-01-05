@@ -7,14 +7,18 @@ const Bookmarks = () => {
 
     return ( 
         <div className='bookmarksComponent'>
-            {bookmarks.map((bookmark, index) => (
-                <div className='quoteContainer' key={index}>
-                    <div className="text">
-                        <h3>{bookmark.content}</h3>
-                        <p>{bookmark.author}</p>
+            {bookmarks.length === 0 ? (
+                <p>No bookmarks added</p> 
+            ) : (
+                bookmarks.map((bookmark, index) => (
+                    <div className='quoteContainer' key={index}>
+                        <div className="text">
+                            <h3>{bookmark.content}</h3>
+                            <p>{bookmark.author}</p>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))
+            )}
         </div>
      );
 }
